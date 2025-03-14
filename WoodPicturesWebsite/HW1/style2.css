@@ -1,0 +1,14 @@
+/* light theme */
+body{
+    background-color: rgb(233, 230, 255);
+    color: rgb(0, 10, 20);
+}
+div#head{
+    background-color: rgb(159, 199, 252);
+}
+div#bottom{
+    background-color: rgb(159, 199, 252);
+}
+#about_the_site{
+    background-color: rgb(159, 199, 252);
+}

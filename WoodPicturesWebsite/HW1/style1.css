@@ -1,0 +1,15 @@
+/* dark theme */
+body{
+    background-color: rgb(5, 2, 26);
+    color: rgb(240, 248, 255);
+}
+div#head{
+    background-color: rgb(13, 14, 82);
+}
+div#bottom{
+    background-color: rgb(13, 14, 82);
+}
+#about_the_site{
+    background-color: rgb(13, 14, 82);
+}
+

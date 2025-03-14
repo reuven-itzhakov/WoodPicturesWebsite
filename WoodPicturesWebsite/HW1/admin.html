@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<!-- this page allows the user to manage the items in his cart, as well as to go to checkout -->
+
+<head>
+    <title>Supply Management</title>
+    <!-- link the css files -->
+    <link rel="stylesheet" href="universal.css">
+    <link id="theme" rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="head">
+        <table style="width:100%; border:solid">
+            <tr style="font-size:40px">
+                <td style="width:33%;">
+                    <label onclick="document.getElementById('linkHome').click()">עמוד בית</label>
+                    <a href="index.html" id="linkHome" hidden></a>
+                </td>
+                <td style="width:33%; text-align:center">
+                    <h1 style="margin: 0;">ניהול הזמנות</h1>
+                </td>
+                <td style="width:33%; text-align:left">
+                    <label>ערכת נושא:&nbsp</label>
+                    <select name="theme select" id="theme_dropdown">
+                        <option value="dark">כהה</option>
+                        <option value="light">בהיר</option>
+                        <option value="crazy">אקראי</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="body">
+        <table>
+            <tr>
+                <td>
+                    <h3>הזמנות:</h3>
+                </td>
+            </tr>
+            <table id="myTable">
+
+            </table>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="admin.js"></script>
+
+</body>
+
+</html>

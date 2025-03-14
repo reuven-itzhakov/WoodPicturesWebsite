@@ -1,0 +1,109 @@
+#imgtable{
+width:100%;
+}
+
+#img{
+  height: 200px;
+  width: 200px;
+  }  
+  
+#bottom{
+  border: solid;
+}
+
+#orderp{
+  text-align: center;
+  font-size: 37px;
+  font-weight: bold;
+}
+
+#orderbotton {
+font-size: 25px; /* Adjust the font size to make the button bigger */
+background-color: rgb(75, 75, 204); /* Set the background color to blue */
+color: white; /* Set the text color to white */
+}
+
+#about_the_site{
+  border: solid;
+  font-size: 25px;
+  text-align: right;
+  direction: rtl;
+  vertical-align: top;
+} 
+
+#table1{ /*center the table*/
+  margin: 0 auto;
+  border-collapse: separate; /* Ensures cells are separated, not collapsed */
+  border-spacing: 150px; /* Adjust the spacing as needed */
+}
+
+#rate{
+  vertical-align: top;
+}
+
+#textname{
+  font-size: 20px;
+
+}
+
+h2{
+  text-decoration: underline;
+}
+
+h3{
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#reviewForm {
+  direction: rtl; /* Set text direction to right-to-left */
+
+}
+
+#reviewForm p, #reviewForm input, #reviewForm textarea, #reviewForm button {
+  font-size: 20px; /* Set the font size for text, input, and button elements */
+  
+}
+#reviewForm input[type="radio"] {
+  transform: scale(1.5); /* make the circles larger */
+  margin-right: 5px; /* Add spacing between the circles and the text */
+}
+
+#reviewForm button {
+  background-color: rgb(75, 75, 204); /* Set background color of the button to blue */
+  color: white; /* Set text color of the button to white */
+}
+
+
+#table2{
+  margin: 0 auto; /* centers the table */
+  border-collapse: separate; /* Ensures cells are separated, not collapsed */
+  border-spacing: 30px; /* Adjust the spacing as needed */
+}
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  width: 15px;
+}
+
+  /* Instagram */
+.fa-instagram {
+  background: rgb(112, 23, 15);
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  width: 15px;
+}
+
+
+
+

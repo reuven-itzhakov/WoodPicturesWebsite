@@ -1,0 +1,44 @@
+@font-face {
+    font-family: pfening;
+    src: url("./pfennig-webfont.ttf");
+}
+
+body{
+    text-align: right;
+    justify-content: right;
+    font-family: pfening;
+    font-size: 25px;
+    direction: rtl;
+    margin:auto;
+}
+label{
+   font-family: pfening; 
+}
+h1{
+    font-size: 65px;
+    font-family: pfening;
+    font-style: italic;
+}
+
+h2{
+    font-size: 55px;
+}
+
+h3{
+    font-size: 45px;
+}
+
+div#body{
+    margin: 20px;
+}
+div#bottom{
+    margin: 20px;
+} 
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-shopping-cart{
+    font-family: pfening;
+    font-size: 45px;
+}

@@ -1,0 +1,18 @@
+/* dark theme */
+body{
+    background-color: #402319;
+    color: rgb(240, 248, 255);
+}
+div#head{
+    background-image: url("media/bg-dark-wood.jpg");
+    background-color: #8C5B3F;
+}
+div#bottom{
+    background-image: url("media/bg-wood.jpg");
+    background-color: #8C5B3F;
+}
+#about_the_site{
+    background-image: url('media/bg-wood.jpg');
+    background-color: #8C5B3F;
+}
+

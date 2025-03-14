@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!-- this page allows the user to manage the items in his cart, as well as to go to checkout -->
+
+<head>
+    <title>Cart</title>
+    <!-- link the css files -->
+    <link rel="stylesheet" href="universal.css">
+    <link id="theme" rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="head">
+        <table style="width:100%; border:solid">
+            <tr style="font-size:40px">
+                <td style="width:20%;">
+                    <label onclick="document.getElementById('linkHome').click()">עמוד בית</label>
+                    <a href="index.html" id="linkHome" hidden></a>
+                </td>
+                <td>
+                    <label onclick="document.getElementById('linkNewItem').click()">הוספת מוצר</label>
+                    <a href="new_item.html" id="linkNewItem" hidden></a>
+                </td>
+                <td style="width:33%; text-align:center">
+                    <h1 style="margin: 0;">עגלה</h1>
+                </td>
+                <td style="width:33%; text-align:left">
+                    <label>ערכת נושא:&nbsp</label>
+                    <select name="theme select" id="theme_dropdown">
+                        <option value="dark">כהה</option>
+                        <option value="light">בהיר</option>
+                        <option value="crazy">אקראי</option>
+                    </select>
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="body">
+        <table>
+            <tr>
+                <td>
+                    <h3>עגלה:</h3>
+                </td>
+            </tr>
+            <table id="myTable" style="border:solid">
+
+            </table>
+            <tr>
+                <td>
+                    <div></div>
+                </td>
+            </tr>
+            <tr>
+                <table>
+                    <tr>
+                        <td>
+                            <div>סך הכל:</div>
+                        </td>
+                        <td id="sum"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>פרטי משלוח:</div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="fName" name="fName" placeholder="שם פרטי"></td>
+                        <td><input type="text" name="address" id="address" placeholder="רחוב"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="lName" name="lName" placeholder="שם משפחה"></td>
+                        <td><input type="text" name="city" id="city" placeholder="עיר"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="email" name="email" placeholder="אימייל"></td>
+                        <td><input type="text" name="id" id="id" placeholder="ת.ז"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" id="phone" name="phone" placeholder="טלפון"></td>
+                        <td><input type="text" name="card" id="card" placeholder="אשראי"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="buy" name="buy" value="סיום הזמנה"></td>
+                    </tr>
+                </table>
+            </tr>
+        </table>
+    </div>
+    <script src="cartDB.js"></script>
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

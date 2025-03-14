@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<!-- this page will introduce the user to the business' previous work, as well as to choose to start a new order -->
+<head>
+    <title>Home</title>
+    <!-- link the css files -->
+    <link rel="stylesheet" href="universal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--מייבא אייקונים-->
+    <link id="theme" rel="stylesheet" href="style1.css">
+    <link id="icons" rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="head">
+        <table style="width:100%; border:solid">
+            <tr style="font-size:40px">
+                <td style="width:25%;" >
+                    <label class="fa fa-shopping-cart" onclick="document.getElementById('linkToCart').click()"></label>
+                    <label onclick="document.getElementById('linkToCart').click()">עגלה</label>
+                    <a href="cart.html" id="linkToCart" hidden></a>
+                    (
+                    <b id="amountInCart">0</b>    
+                    )
+                </td>
+                <td style="width:35%; text-align:center">
+                <h1 style="margin: 0;">תמונה בעץ</h1>
+                </td>
+                <td style="width:25% ;font-size: 15px; ;">
+                <table>
+                    <tr>
+                        <td>
+                            שם משתמש:
+                        </td>
+                        <td>
+                            <input type="text" id="user">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            סיסמא:
+                        </td>
+                        <td>
+                            <input type="password" id="pass">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        </td>
+                        <td>
+                            <input type="button" value="כניסה" id="sign-in">
+                        </td>
+                    </tr>
+                </table>
+                </td>
+                <td style="width:25%; text-align:left">
+                <label>ערכת נושא:&nbsp</label>
+                <select name="theme select" id="theme_dropdown">
+                    <option value="dark">כהה</option>
+                    <option value="light">בהיר</option>
+                    <option value="crazy">אקראי</option>
+                </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="body">
+    <table id="imgtable">
+        <h2>עבודות קודמות</h2>
+        <tr>
+            <td>
+                <img src="media/prev_work1.jpg" id="img" > 
+            </td>
+            <td>
+                <img src="media/prev_work2.jpg" id="img" >
+            </td>
+            <td>
+                <img src="media/prev_work3.jpg" id="img">
+            </td>
+            <td>
+                <img src="media/prev_work4.jpg" id="img">
+            </td>
+            <td>
+                <img src="media/prev_work5.jpg" id="img">
+            </td>
+            <td>
+                <img src="media/prev_work6.jpg" id="img">
+            </td>
+        </tr>
+    </table>
+</div>
+    <br>
+    <br>
+    <p id="orderp"> להזמנת מוצר בעיצוב אישי
+       <br> <button id="orderbotton" type="button" onclick="window.location.href='new_item.html'">לחץ כאן</button> <!-- button to order item-->
+    </p>
+    <br>
+    <br>
+    <table id="table1">
+        <tr>
+            <td id="rate">
+                <form id="reviewForm">
+                    <div >
+                        <h3>דרגו אותנו</h3>
+                        <label id="textname" >שם: </label>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <textarea name="msg" id="text" cols="35" rows="8">חוות דעת</textarea> <br>
+                    דירוג:<br>
+                    גרוע 
+                    <input type="radio" id="star1" name="star" value="1">1 
+                    <input type="radio" id="star2" name="star" value="2">2 
+                    <input type="radio" id="star3" name="star" value="3">3 
+                    <input type="radio" id="star4" name="star" value="4">4 
+                    <input type="radio" id="star5" name="star" value="5">5 מצויין
+                    <br>
+                    <button type="button" onclick="reviewFunction()" >שלח </button>         
+                    <p id="p_sent"></p>
+                    <button type="button" onclick="getAllReviews()">הראה חוות דעת </button>
+                </form>
+            </td>
+            <td id="about_the_site">
+                קצת עלינו:
+                <br>
+                הדפסה על עץ  זה הדבר הכי חם היום בעיצוב הבית.
+                <br>
+                בלוק עץ עם תמונה אישית עליו מכניס חום לבית ומזכיר אירועים וחוויות שתמיד כיף להיזכר בהם.
+                <br>
+                אנו מבצעים כל פרויקט בעבודת יד איכותית תוך מתן דגש על פרטים והתאמה אישית לכל לקוח.
+                <br>
+                אז למה אתם מחכים, פשוט העלו את התמונה הוסיפו לעגלה ואנחנו נעשה את השאר.
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                תגובות:
+                <p id="p_review" style="text-align:right"></p>
+            </td>
+            </tr>
+    </table>
+
+
+    <div id="bottom">
+        <table id="table2">
+            <tr>
+                <td>
+                    <a href="https://www.facebook.com/?locale=he_IL" class="fa fa-facebook"></a>
+                </td>
+                <td>
+                    <a href=https://www.instagram.com/picture_in_a_tree/ class="fa fa-instagram"></a> <br>
+                </td>
+                <td>
+                    טלפון ליצירת קשר:053-1111111
+                </td>
+                <td>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3854.072231659695!2d35.28463350485683!3d32.91519028788333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151c333334df8b1d%3A0xf4846caa6dd2d203!2z15TXnteb15zXnNeUINeU15DXp9eT157XmdeqINec15TXoNeT16HXlCDXkdeo15DXldeT15Qg15vXqNee15nXkNec!5e0!3m2!1siw!2sil!4v1680990541205!5m2!1siw!2sil" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> 
+                </td>
+                <td>
+                    <iframe src="https://embed.waze.com/iframe?zoom=16&lat=32.914216&lon=35.283128&ct=livemap" width="600" height="450" allowfullscreen></iframe>                
+                </td>
+                
+            </tr>
+        </table>
+    </div>
+       <!-- link the javascript file -->
+       <script src="index.js"></script>
+    </body>
+    
+    </html>
