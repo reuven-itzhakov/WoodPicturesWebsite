@@ -1,0 +1,18 @@
+/* light theme */
+body{
+    background-color: #D9C6BA;
+    color: rgb(0, 10, 20);
+}
+div#head{
+    background-image: url('media/bg-light-wood.jpg');
+    background-color: #EBA685;
+}
+div#bottom{
+    background-image: url('media/bg-wood.jpg');
+    background-color: #D9AB82;
+}
+#about_the_site{
+    background-image: url('media/bg-wood.jpg');
+    background-color: #D9AB82;
+    text-shadow: white 0px 0px 8px;
+}

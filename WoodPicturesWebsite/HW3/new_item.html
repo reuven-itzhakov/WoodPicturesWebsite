@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<!-- this page allows the user to customize a new item and to add the finished product to his personal cart -->
+<head>
+    <title>New Item</title>
+    <!-- link the css files -->
+    <link rel="stylesheet" href="universal.css">
+    <link id="theme" rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="head">
+        <table style="width:100%; border:solid">
+            <tr style="font-size:40px">
+                <td style="width:20%;" >
+                    <label class="fa fa-shopping-cart" onclick="document.getElementById('linkToCart').click()"></label>
+                    <label onclick="document.getElementById('linkToCart').click()">עגלה</label>
+                    <a href="cart.html" id="linkToCart" hidden></a>
+                    (
+                    <b id="amountInCart">0</b>    
+                    )
+                </td>
+                <td>
+                    <label onclick="document.getElementById('linkToHome').click()">עמוד בית</label>
+                    <a href="index.html" id="linkToHome" hidden></a>
+                </td>
+                <td style="width:33%; text-align:center">
+                <h1 style="margin: 0;">הזמנת מוצר</h1>
+                </td>
+                <td style="width:33%; text-align:left">
+                <label>ערכת נושא:&nbsp</label>
+                <select name="theme select" id="theme_dropdown">
+                    <option value="dark">כהה</option>
+                    <option value="light">בהיר</option>
+                    <option value="crazy">אקראי</option>
+                </select>
+                </td>
+            </tr>
+
+        </table>
+
+
+    </div>
+    <div id="body">
+        <h3 style="margin: 0;">בחר מוצר:</h3>
+        <input type="radio" id="woodenBlock" name="product" value="woodenBlock" style="display:none">
+        <label for="woodenBlock"><img  src="media/woodEngraving.jpg" width="200" height="200"></label>
+        <input type="radio" id="wallet" name="product" value="wallet" style="display:none">
+        <label for="wallet"><img src="media/walletEngraving.jpg" width="200" height="200"></label>
+        <input type="radio" id="case" name="product" value="case" style="display:none">
+        <label for="case"><img src="media/caseEngraving.jpg" width="200" height="200"></label>
+        <input type="radio" id="cup" name="product" value="cup" style="display:none">
+        <label for="cup"><img src="media/cupEngraving.jpg" width="200" height="200"></label>
+        <div id="divBlock" style="display:none">
+            גודל בלוק:
+            <select name="block_size" id="block_size">
+                <option value="small">8.5X14X3 ס"מ</option> <!-- 99 -->
+                <option value="medium">17.5X24X4 ס"מ</option> <!-- 139 -->
+                <option value="med_sqr">14X14X3 ס"מ</option> <!-- 109 -->
+                <option value="large_sqr">19.5X19.5X4 ס"מ</option> <!-- 149 -->
+            </select>
+        </div>
+        <div id="divWallet" style="display:none">
+            סוג ארנק:
+            <select name="wallet_comp" id="wallet_comp">
+                <option value="guci">גוצ'י</option>  <!-- 3150 -->
+                <option value="tommy">טומי הילפיגר</option>  <!-- 750 -->
+                <option value="louis_vuitton">לואי ויטון</option>  <!-- 6420 -->
+            </select>
+        </div>
+        <div id="divCase" style="display:none">
+            סוג טלפון:
+            <select name="phone_model" id="phone_model">
+                <option value="ip_15p">iPhone 15 pro</option> <!-- 110 -->
+                <option value="sam_gal">Samsung Galaxy S22</option> <!-- 110 -->
+                <option value="xi_po_f2p">xiaomi poco f2 pro</option> <!-- 110 -->
+                <option value="onePlus">OnePlus 7T</option> <!-- 110 -->
+                <option value="gog_pix">Google Pixel 2</option> <!-- 110 -->
+                <option value="nok_xp">Nokia Xperia</option> <!-- 110 -->
+                <option value="mot_cor">Motorla Corola</option> <!-- 110 -->
+            </select>
+        </div>
+        <div id="divCup" style="display:none">
+            צבע ספל: 
+            <select name="cupColor" id="cupColor">
+                <option value="white">לבן</option> <!-- 120 -->
+                <option value="pink">ורוד</option> <!-- 120 -->
+                <option value="cyan">תכלת</option> <!-- 120 -->
+            </select>
+        </div>
+    </div>
+    <div id="bottom">
+        <table>
+            <tr>
+                <td>
+                    תמונות מהסוג: jpg, png בלבד.
+                    <br>
+                    <input type="file" id="image" name="image" accept="image/png, image/jpg">
+                    <br>
+                    הטקסט שיודפס על המוצר:
+                    <br>
+                    <textarea name="text" id="text" cols="30" rows="10"></textarea>
+                    <br>
+                    מחיר:
+                    <label id="price">0</label><!-- Here will be calculated the price-->
+                    ₪
+                    <br>
+                    <input type="submit" id="addToCart" value="הוסף לסל" style="font-size:30px; height:50px; width:200px">
+                </td>
+                <td>
+                    <canvas id="previewCanvas"></canvas>
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    
+    <!-- link the javascript file -->
+    <script src="Theme.js"></script>
+    <script src="new_itemDB.js"></script>
+    <script src="new_item.js"></script>
+</body>
+
+</html>
